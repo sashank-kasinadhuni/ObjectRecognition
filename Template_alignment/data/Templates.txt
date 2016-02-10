@@ -1,0 +1,8 @@
+# A list of point clouds to try aligning
+data/jars0.pcd
+data/jars1.pcd
+data/jars2.pcd
+data/jars3.pcd
+data/jars4.pcd
+data/jars5.pcd
+

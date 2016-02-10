@@ -1,0 +1,31 @@
+//////////   Keypoints Class Collection ////////////////
+
+The following keypoints methods are a part of this collection:
+
+keypoints.cpp , keypoints.h
+  Classes :
+	USKeypoints -- calculate keypoints using Uniform Sampling
+		paramaters: 
+			
+	ISSKeypoints -- calculate keypoints using Intrinsic Shape Signatures
+		paramaters:
+			iss_salient_radius_ 	: the radius of the spherical neighborhood used to compute the scatter matrix.
+			iss_non_max_radius_ 	: the non maxima suppression radius.
+			iss_gamma_21_       	: the upper bound on the ratio between the second and the first eigenvalue
+			iss_gamma_32_       	: the upper bound on the ratio between the third and the second eigenvalue 
+			iss_min_neighbors_  	: Minimum number of neighbors that has to be found while applying the non maxima suppression algorithm.
+			iss_normal_radius_  	: the radius used to estimate surface normals.
+    			iss_border_radius_  	: The radius used to compute the boundary points of the input cloud.
+		methods: 
+			computeCloudResolution  : calculate the cloud resolution to set up resolution invariance by multiplying all parameters by this 							  factor.
+			setInputCloud           : set the input cloud to perform keypoint detection
+			setNormals		: set precalculated normals for the iss detector     
+			ComputeISSKeypoints     : calculate the ISS keypoints on the given input cloud.
+keypointsrealtime.cpp
+    Usage: ./filename [options]
+	A threshold of 3.0 is set along the Z axis to limit the amount of points being processed	
+    options:
+        -ds 		: downsample the cloud using a leafsize of 0.1f
+	-us 		: use Uniform sampling keypoints method
+	-iss 		: use Intrinsic shape Signatures method
+	-segment 	: segment the pointcloud into individual clusters using Euclidian distance

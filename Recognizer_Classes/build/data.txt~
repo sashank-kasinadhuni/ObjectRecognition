@@ -1,0 +1,5 @@
+--model Speaker
+--start 0
+--end 4
+--downsample true
+--leafsize 0.005

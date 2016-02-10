@@ -1,0 +1,7 @@
+this is a program to convert ply files generated from skanect into text files containing the fields x, y ,z to create point clouds
+
+if not compiled .Compile using the g++ command .
+
+usage: program name input.ply output_filename
+
+the output will be saved to output_filename.txt

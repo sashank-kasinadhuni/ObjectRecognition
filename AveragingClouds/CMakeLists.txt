@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+
+project(average_clouds)
+
+find_package(PCL 1.2 REQUIRED)
+
+include_directories(${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
+
+add_executable (average_cloud average_cloud.cpp)
+target_link_libraries (average_cloud ${PCL_LIBRARIES})
